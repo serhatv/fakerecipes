@@ -35,9 +35,10 @@ def share_recipe(req):
                 recipe.created_by = user
                 recipe.save()
                 form.save_m2m()
-                return HttpResponse('Shared!')
+                return redirect('/')
             except:
-                return HttpResponse('Error, couldnt save')
+                return HttpResponse('Internal Server Error')
+
         else:
             return render(req, 'share_recipe.html', {'form': form})
 
@@ -95,9 +96,9 @@ def signup(req):
         if form.is_valid():
             try:
                 form.save()
-                return HttpResponse('OK!')
+                return redirect('/login')
             except ValidationError:
-                return HttpResponse('error')
+                return HttpResponse('Internal Server Error')
         else:
             return render(req, 'signup.html', {'form': form})
 
