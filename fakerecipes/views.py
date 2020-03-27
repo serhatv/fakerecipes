@@ -29,7 +29,7 @@ def index(req):
         ingredient = Ingredient.objects.get(id=i['ingredients'])
         ingredients_with_total.append({'name': ingredient.name, 'total': i['total']})
 
-    return render(req, 'index.html', {'recipes': recipes, 'ingredient_list': ingredients_with_total})
+    return render(req, 'index.html', {'recipes': recipes, 'ingredient_list': ingredients_with_total[:5]})
 
 
 @login_required
