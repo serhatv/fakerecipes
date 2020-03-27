@@ -5,6 +5,7 @@
 <div>
     <form class="accountrelated" action="/login/" method="POST">
         
+        <p style="color: red;"><b>{{ err_msg }}</b></p>
         {% csrf_token %}
 
         {% for field in form %}

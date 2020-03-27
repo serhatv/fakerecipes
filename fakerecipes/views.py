@@ -77,7 +77,7 @@ def log_in(req):
                 login(req, user)
                 return redirect('/')
             else:
-                return render(req, 'login.html', {'form': form})
+                return render(req, 'login.html', {'form': form, 'err_msg': 'Invalid Credentials.'})
         else:
             return render(req, 'login.html', {'form': form})
 
@@ -98,9 +98,9 @@ def signup(req):
                 form.save()
                 return redirect('/login')
             except ValidationError:
-                return HttpResponse('Internal Server Error')
+                return render(req, 'signup.html', {'form': form, 'err_msg': 'An Error Occured...'})
         else:
-            return render(req, 'signup.html', {'form': form})
+            return render(req, 'signup.html', {'form': form, 'err_msg': 'Invalid fields.'})
 
 def log_out(request):
     logout(request)
