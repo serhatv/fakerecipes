@@ -67,8 +67,6 @@ def get_recipe(req, recipe_id):
 
 # AUTH RELATED
 
-
-@csrf_exempt
 def log_in(req):
     if req.method == 'GET':
         if req.user.is_authenticated:
@@ -93,7 +91,6 @@ def log_in(req):
             return render(req, 'login.html', {'form': form})
 
 
-@csrf_exempt
 def signup(req):
     if req.method == 'GET':
         if req.user.is_authenticated:
