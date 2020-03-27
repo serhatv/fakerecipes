@@ -18,14 +18,10 @@ media
 pip-log.txt 
 pip-delete-this-directory.txt 
 
-# Jupyter Notebook 
-.ipynb_checkpoints 
 
 # pyenv 
 .python-version 
 
-# SageMath parsed files 
-*.sage.py 
 
 # Environments 
 .env 
@@ -44,3 +40,6 @@ venv.bak/
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# db
+db.sqlite3
