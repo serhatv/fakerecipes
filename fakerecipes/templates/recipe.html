@@ -8,10 +8,11 @@
     <div class="recipe">
         <h1>{{recipe.title}} <i>by</i> {{recipe.created_by}}</h1>
         <p>{{recipe.created_at}}</p>
+        <br>
+        <p><b>Difficulty: </b>{{recipe.difficulty}}</p>
+        <br>
         <img src="{{recipe.image}}" alt="">
 
-        <p><b>Difficulty: </b>{{recipe.difficulty}}</p>
-        <p>{{recipe.description}}</p>
         <h3>Ingredients</h3>
         <ul>
             {% for ingredient in recipe.ingredients.all %}
@@ -19,6 +20,8 @@
 
             {% endfor %}
         </ul>
+        <p>{{recipe.description}}</p>
+        
     </div>
     {% else %}
         <h2> NO RECIPE FOUND </h2>

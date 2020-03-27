@@ -11,7 +11,7 @@ body {
 
 a, a:hover {
     text-decoration: none;
-    color: #ac0a0b;
+    color: #c53b3b;
     font-weight: bold;
 }
 
@@ -20,7 +20,6 @@ a:hover {
 }
 
 ul {
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -105,7 +104,7 @@ label[for="id_image"] {
 }
 
 header {
-    background: #efefd0;
+    background: #f1ebcf;
 }
 
 header> div {
@@ -123,6 +122,14 @@ header> div>div {
 header a {
     padding: 24px;
     margin: 0;
+}
+
+header>div>div:first-child a:first-child {
+    padding-left: 0;
+}
+
+header>div>div:last-child a:last-child {
+    padding-right: 0;
 }
 
 header span {

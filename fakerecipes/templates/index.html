@@ -12,7 +12,7 @@
                         <h2>{{recipe.title}}</h2>
                         <img src="{{recipe.image}}" alt="">
                         <p>{{recipe.description|truncatechars:256}}</p>
-                        <p>{{recipe.created_at}} by <b>{{recipe.created_by}}</b></p>
+                        <p>{{recipe.created_at}} - by <b>{{recipe.created_by}}</b></p>
                     </div>
                 </a>
             {% endfor %}
