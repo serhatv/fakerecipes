@@ -16,9 +16,20 @@ from fakerecipes.admin import UserCreationForm
 from fakerecipes.models import AppUser, Recipe
 from django.conf import settings
 
+from django.db.models import Count
+
 def index(req):
-    recipes = Recipe.objects.all()
-    return render(req, 'index.html', {'recipes': recipes})
+    recipes = Recipe.objects.all().order_by('-created_at')
+
+    # I couldnt find a way to get the Ingredient names so
+    # I get them with a for loop... so shame...
+    ingredients_annotated = Recipe.objects.all().values('ingredients').annotate(total=Count('ingredients')).order_by('-total')
+    ingredients_with_total = []
+    for i in ingredients_annotated:
+        ingredient = Ingredient.objects.get(id=i['ingredients'])
+        ingredients_with_total.append({'name': ingredient.name, 'total': i['total']})
+
+    return render(req, 'index.html', {'recipes': recipes, 'ingredient_list': ingredients_with_total})
 
 
 @login_required

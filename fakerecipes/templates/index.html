@@ -22,7 +22,19 @@
         {% endif %}
     </div>
     <div id="Sidebar">
-        <p>Search etc</p>
+        <div>
+            <p>Search etc</p>
+        </div>
+        <div>
+            <h3>Most Used Ingredients</h3>
+            <div>
+                <ul>
+                    {% for ing in ingredient_list %}
+                        <li>{{ing.name}} ({{ing.total}})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -221,3 +221,13 @@ main {
 #RecipeDetailPage  ul {
     margin-bottom: 48px;
 }
+
+
+#Sidebar>div {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+#Sidebar>div h3 {
+    margin-top: 0;
+}
