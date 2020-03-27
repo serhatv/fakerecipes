@@ -7,10 +7,7 @@
     {% if recipe %}
     <div class="recipe">
         <h1>{{recipe.title}} <i>by</i> {{recipe.created_by}}</h1>
-        <p>{{recipe.created_at}}</p>
-        <br>
-        <p><b>Difficulty: </b>{{recipe.difficulty}}</p>
-        <br>
+        <p>{{recipe.created_at}} - <b>Difficulty: </b>{{recipe.difficulty}}</p>
         <img src="{{recipe.image}}" alt="">
 
         <h3>Ingredients</h3>
