@@ -19,7 +19,7 @@ from django.conf import settings
 from django.db.models import Count
 
 def index(req):
-    recipes = Recipe.objects.all().order_by('created_at')
+    recipes = Recipe.objects.all()
 
     # I couldnt find a way to get the Ingredient names so
     # I get them with a for loop... so shame...
