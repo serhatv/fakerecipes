@@ -114,7 +114,7 @@ header {
 header> div {
     max-width: 1024px;
     margin: auto;
-    border-bottom: 1px solid #c53b3b;
+    border-bottom: 1px solid #ccc;
 }
 
 header> div,
@@ -125,15 +125,16 @@ header> div>div {
 }
 
 header > div div a:first-child {
-    border-left: 1px solid #c53b3b;
+    border-left: 1px solid #ccc;
 }
 
 header a {
     padding: 12px 24px;
     font-size: 14px;
     margin: 0;
-    border-right: 1px solid #c53b3b;
+    border-right: 1px solid #ccc;
     font-weight: normal;
+    color: #ccc;
 }
 
 header a:hover {
