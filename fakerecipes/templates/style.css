@@ -226,8 +226,18 @@ main {
 #Sidebar>div {
     padding: 12px;
     border: 1px solid #ccc;
+    margin-bottom: 24px;
 }
 
 #Sidebar>div h3 {
     margin-top: 0;
+}
+
+#Sidebar>div ul {
+    list-style: none;
+    padding-left: 12px;
+}
+
+#Sidebar>div p {
+    margin: 0;
 }
