@@ -31,6 +31,9 @@ DEBUG = os.environ['DEBUG']
 
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS']
 
+AUTH_USER_MODEL = 'fakerecipes.AppUser'
+LOGIN_URL = '/login'
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 #AWS
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
@@ -73,7 +76,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fakerecipes'
+    'fakerecipes',
+    's3direct'
 ]
 
 MIDDLEWARE = [
