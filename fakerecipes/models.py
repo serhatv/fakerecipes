@@ -51,6 +51,8 @@ class Ingredient(models.Model):
         return self.name
 
 class Recipe(models.Model):
+    class Meta:
+        ordering = ('created_at')
     DifficultyTypes = models.TextChoices('DifficultyType', 'Easy Medium Hard')
     title= models.CharField('title', max_length=128)
     description= models.TextField('description', max_length=10240)
