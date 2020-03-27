@@ -11,9 +11,9 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 
-from app.forms import LoginForm, RecipeForm
-from app.admin import UserCreationForm
-from app.models import AppUser, Recipe
+from fakerecipes.forms import LoginForm, RecipeForm
+from fakerecipes.admin import UserCreationForm
+from fakerecipes.models import AppUser, Recipe
 from django.conf import settings
 
 def index(req):

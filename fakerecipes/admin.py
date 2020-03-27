@@ -3,8 +3,8 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from .models import AppUser
-from .forms import UserCreationForm, UserChangeForm
+from fakerecipes.models import AppUser
+from fakerecipes.forms import UserCreationForm, UserChangeForm
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from app.models import AppUser, Recipe, Ingredient
+from fakerecipes.models import AppUser, Recipe, Ingredient
 
 class LoginForm(forms.Form):
     username = forms.CharField(label='Username', max_length=32, min_length=4, error_messages={'invalid': 'min 4, max 32'})
