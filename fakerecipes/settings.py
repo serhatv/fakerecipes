@@ -24,12 +24,44 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&a)cl4ong&0fjdzk+su$-iuz8kn==5zy3*($pkjf8dveboci4j'
+SECRET_KEY = os.environ('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ('ALLOWED_HOSTS')
+
+
+#AWS
+AWS_ACCESS_KEY_ID = os.environ('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.environ('AWS_S3_REGION_NAME')
+AWS_S3_ENDPOINT_URL = os.environ('AWS_S3_ENDPOINT_URL')
+
+S3DIRECT_DESTINATIONS = {
+    'main': {
+        # "key" [required] The location to upload file
+        #       1. String: folder path to upload to
+        #       2. Function: generate folder path + filename using a function  
+        'key': 'uploads/images',
+
+
+        # "allowed" [optional] Limit to specific mime types
+        #           List: list of mime types
+        'allowed': ['image/jpeg', 'image/jpg', 'image/png'],
+
+        # "content_length_range" [optional] Limit file size
+        #                        Tuple: (from, to) in bytes
+        'content_length_range': (5000, 20000000),
+
+        # "allow_existence_optimization" [optional] Checks to see if file already exists,
+        #                                returns the URL to the object if so (no upload)
+        #                                Boolean: True, False
+        #'allow_existence_optimization': False,
+    }
+}
+
 
 
 # Application definition
