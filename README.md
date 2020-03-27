@@ -5,7 +5,7 @@ Check [fakerecipes.herokuapp.com](https://fakerecipes.herokuapp.com/)
 ___
 
 
-Actually I tried from scratch to learn about **Django**, so this project is basically cleaned to serve with Heroku. 
+Actually I tried from scratch to learn about **Django**, so this project is basically cleaned version of it to serve at **Heroku**. 
 
 So to run locally there is a need to mock the *os environment* variables, like providing a _database_ or _AWS_ credentials.
 
