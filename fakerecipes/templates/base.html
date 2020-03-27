@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proj0</title>
+    <style>{% include "style.css" %}</style>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    {{form.media}}
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <a href="/">FakeRecipes.com</a>
+                <a href="/recipe">Share Recipe</a>
+            </div>
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="/logout"><span>Hey {{ user.username }}! </span>(Logout)</a>
+                {% else %}
+                    <a href="/login">Login</a>
+                    <a href="/signup">Signup</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    <footer></footer>
+</body>
+</html>

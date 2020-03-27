@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div id="RecipeDetailPage">
+    {% if recipe %}
+    <div class="recipe">
+        <h1>{{recipe.title}} <i>by</i> {{recipe.created_by}}</h1>
+        <p>{{recipe.created_at}}</p>
+        <img src="{{recipe.image}}" alt="">
+
+        <p><b>Difficulty: </b>{{recipe.difficulty}}</p>
+        <p>{{recipe.description}}</p>
+        <h3>Ingredients</h3>
+        <ul>
+            {% for ingredient in recipe.ingredients.all %}
+                <li>{{ingredient.name}}</li>
+
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+        <h2> NO RECIPE FOUND </h2>
+    {% endif %}
+</div>
+
+
+{% endblock  %}

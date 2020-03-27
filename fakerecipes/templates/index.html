@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="MainContainer">
+    <div id="RecipeList">
+        {% if recipes %}
+            <div>
+            {% for recipe in recipes %}
+                <a class="recipe" href="recipe/{{ recipe.id }}">
+                    <div>
+                        <h2>{{recipe.title}}</h2>
+                        <img src="{{recipe.image}}" alt="">
+                        <p>{{recipe.description|truncatechars:256}}</p>
+                        <p>{{recipe.created_at}} by <b>{{recipe.created_by}}</b></p>
+                    </div>
+                </a>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>no recipe yet</p>
+        {% endif %}
+    </div>
+    <div id="Sidebar">
+        <p>Search etc</p>
+    </div>
+</div>
+
+{% endblock  %}

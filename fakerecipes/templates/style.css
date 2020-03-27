@@ -1,0 +1,197 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.2px;
+    word-spacing: 3px;
+    line-height: 2em;
+}
+
+
+
+a, a:hover {
+    text-decoration: none;
+    color: #ac0a0b;
+    font-weight: bold;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+form {
+    max-width: 1024px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form.accountrelated {
+    max-width: 480px;
+}
+
+form  > div {
+    display: flex;
+    align-items: flex-start;
+    margin: 24px 0;
+}
+
+form.accountrelated > div {
+    align-items: center;
+}
+
+
+form input,
+form textarea{
+    display: inline-block;
+    flex-basis: 80%;
+
+
+    font-family: 'Playfair Display', serif;
+}
+
+form label {
+    flex-basis: 20%;
+}
+
+form select {
+    min-width: 320px;
+    overflow: hidden;
+}
+
+form select,
+form input,
+form textarea {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+
+form>div:last-child {
+    align-items: center;
+}
+
+input[type="submit"]{
+    padding: 12px 64px;
+    flex-basis: 128px;
+    margin-right: 24px
+}
+
+form.accountrelated input[type="submit"]{
+    padding: 12px 64px;
+    margin: 0;
+    flex-basis: 100%;
+}
+
+
+input.file-input{
+    border: none;
+    padding: 0;
+}
+
+label[for="id_image"] {
+    display: none;
+}
+
+header {
+    background: #efefd0;
+}
+
+header> div {
+    max-width: 1024px;
+    margin: auto;
+}
+
+header> div,
+header> div>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    padding: 24px;
+    margin: 0;
+}
+
+header span {
+    color: black;
+    font-weight: normal;
+}
+
+header a:hover {
+    background: #e0e0ac;
+    text-decoration: none;
+}
+
+main {
+    min-height: 100vh;
+    padding: 24px 0 128px 24px;
+}
+
+
+
+#MainContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: auto;
+}
+
+#MainContainer > div {
+    padding: 16px 0;
+}
+
+
+#MainContainer #RecipeList {
+    flex-basis: 65%;
+}
+
+#MainContainer #Sidebar {
+    flex-basis: 30%;
+}
+
+
+#MainContainer #RecipeList a.recipe:hover {
+    background: #efefef;
+}
+
+#MainContainer #RecipeList a.recipe {
+    display: block;
+    margin-bottom: 32px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    color: black;
+    font-weight: normal;
+}
+
+#MainContainer #RecipeList .recipe img {
+    max-height: 256px;
+    max-width: 256px;
+}
+
+#MainContainer #RecipeList .recipe h2 {
+    margin-top: 0;
+}
+
+
+#RecipeDetailPage {
+    max-width: 1024px;
+    margin: auto;
+}
+
+#RecipeDetailPage img {
+    margin: auto;
+    max-height: 50vh;
+}
