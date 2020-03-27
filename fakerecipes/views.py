@@ -13,7 +13,7 @@ from datetime import datetime
 
 from fakerecipes.forms import LoginForm, RecipeForm
 from fakerecipes.admin import UserCreationForm
-from fakerecipes.models import AppUser, Recipe
+from fakerecipes.models import AppUser, Recipe, Ingredient
 from django.conf import settings
 
 from django.db.models import Count
